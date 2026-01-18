@@ -13,7 +13,7 @@ const Nav = () => {
     }
   }
   return (
-    <nav className='fixed text-xl inset-0 w-full p-6 z-50'>
+    <nav className='fixed h-fit text-xl inset-0 w-full p-6 z-50'>
       <div className='flex gap-8 text-white font-medium tracking-wide'>
         <Link href="/" onClick={(e) => handleClick(e, "/")}>Home</Link>
         <Link href="/services" onClick={(e) => handleClick(e, "/services")}>Services</Link>

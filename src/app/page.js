@@ -7,7 +7,7 @@ const page = () => {
       <div className="max-w-7xl">
         {/* <Appear delay={1}> */}
           <h1 className="text-[16vw] font-big tracking-tight text-center text-neutral-300 leading-[.8]">
-            The Art of Simplicity
+            NEXT JS PAGE TRANSITION
           </h1>
         {/* </Appear> */}
       </div>
