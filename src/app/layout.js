@@ -1,13 +1,16 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bebas_Neue, Inter_Tight } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/nav/Nav";
+import { ViewTransitions } from "next-view-transitions";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue",
   subsets: ["latin"],
+  weight: "400",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const interTight = Inter_Tight({
+  variable: "--font-inter-tight",
   subsets: ["latin"],
 });
 
@@ -18,12 +21,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={`${bebasNeue.variable} ${interTight.variable} antialiased`}
+        >
+          <Nav />
+          {children}
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
